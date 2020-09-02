@@ -1,0 +1,104 @@
+.Allcontent {
+    max-width: max-content;
+    margin: auto;
+    background-color: beige;
+}
+
+.leftColumn {
+    float: left;
+    margin-top: 30px;
+    margin-right: 10px;
+    width: 400px;
+    background-color: #e8fff7;
+    box-shadow: 5px 5px 5px 5px rgb(187, 187, 187);
+}
+
+.avatarName {
+    margin: 15px auto;
+    max-width: max-content;
+    border: 3px solid rgb(75, 75, 75);
+}
+
+.rightColumn {
+    margin: 0px 10px;
+    padding: 0px;
+    width: 700px;
+    float: left;
+    background-color: rgb(252, 252, 252);
+}
+.eduBox, .workBox {
+    margin: 30px 0px;
+    padding: 10px 20px;
+    width: max-width;
+    background-color: #e8fff7;
+    box-shadow: 5px 5px 5px 5px rgb(187, 187, 187);
+}
+.innerRightBox {
+    padding: 10px 15px;
+}
+.aboutMe {
+    padding: 20px;
+}
+p.headBox {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6e6e6e;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 2px 10px;
+    display: inline-block;
+    box-shadow: 2px 2px 2px rgb(95, 95, 95);
+}
+
+#fullName {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    border: 3px solid rgb(75, 75, 75);
+    background-color: rgb(75, 75, 75);
+}
+
+.comLangBox {
+    margin-left: 20px;
+}
+
+.comLangCol {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+}
+
+.leftColWords {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.rightColWords {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.aboutMeBrief {
+    font-size: 17px;
+    color: rgb(80, 80, 80);
+}
+
+.alpha-margin-right {
+margin-right: 15px;
+}
+
+.alpha-margin-topBot15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+li {
+    list-style-type: circle;
+}
+
+table {
+
+}
