@@ -61,7 +61,7 @@ function displayStats(list) {
         let avg = calAverageArrayNum(list);
         let min = list[0];
         let max = list[list.length - 1];  
-        return alert("For the list " + originalList + ", the average is " + avg + ", the minimum is " + min + ", the maximum is " + max) //use <toFixed(n)> to fixed n decimal point
+        return alert("For the list " + originalList + ", the average is " + avg + ", the minimum is " + min + ", and the maximum is " + max) //use <toFixed(n)> to fixed n decimal point
     } else {
         return alert("For the list that is empty, the average is 0, the minimum is 0, the maximum is 0")
     }
