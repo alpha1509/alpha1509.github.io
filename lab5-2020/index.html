@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime Number</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h1 {
+                text-align: center;
+                font-size: 2vw;
+            }
+            p {
+                font-size: 3.5vw;
+            }
+            ul, ol {
+                font-size: 1.8vw;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let arrayPrime = [];
+            let inputNum;
+            outer: while (true) {
+                inputNum = prompt('Enter Positive Integer');
+                if (isNaN(inputNum) == false && inputNum !== ('' && null && true && false)) {
+                    let realNum = parseFloat(inputNum);
+                    if(Number.isInteger(realNum) && realNum > 1) {
+                        let i = 2;
+                        for (i = 2; i <= realNum; i++) {
+                            let isPrime = true;
+                            for (j = 2; j < i; j++ ) {
+                                if (i % j == 0) {
+                                    isPrime = false;
+                                    break
+                                }
+                            }
+                            if (isPrime){
+                                arrayPrime.push(i);
+                            }
+                        }
+                        break outer;
+                    }
+                }
+            }
+            alert("For n = " + inputNum + ", prime number are\n" + arrayPrime);
+        </script>
+        <h1>Prime Numbers Finder!</h1>
+        <p>Write the web app to prompt accepting for a positive integer number</p>
+        <ul>
+            <li>If the entered text is not a positive integer number, 
+                then the web app will keep asking for a number until 
+                the valid positive integer is entered
+            </li>
+            <li>
+                If the entered text is a positive integer, then the 
+                app will print prime numbers that are not greater than 
+                that given positive integer
+            </li>
+        </ul>
+        <p>Hint:</p>
+        <ol>
+            <li>you may want to use loop with label</li>
+            <li>you may want to use array with push function</li>
+        </ol>
+    </body>
+</html>
