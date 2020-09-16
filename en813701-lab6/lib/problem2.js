@@ -1,5 +1,5 @@
 function isInteger (inputNum) {
-    return (!isNaN(inputNum) && !inputNum.includes(".") && Number.isInteger(parseFloat(inputNum))) ? true: false;
+    return (!isNaN(inputNum) && !inputNum.includes(".") && Number.isInteger(parseInt(inputNum))) ? true: false;
 }
 
 function isNotEmptyArray(array) {
