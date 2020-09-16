@@ -1,20 +1,7 @@
-function isPosInteger (inputNum) {
+function isInteger (inputNum) {
     if (!isNaN(inputNum) && !inputNum.includes(".")) {
-        var realNum = parseFloat(inputNum);
-        if(Number.isInteger(realNum) && realNum > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-        return false;
-    }
-}
-
-function isNegInteger (inputNum) {
-    if (!isNaN(inputNum) && !inputNum.includes(".")) {
-        var realNum = parseFloat(inputNum);
-        if(Number.isInteger(realNum) && realNum < 0) {
+        let realNum = parseFloat(inputNum);
+        if(Number.isInteger(realNum)) {
             return true;
         } else {
             return false;
@@ -25,28 +12,24 @@ function isNegInteger (inputNum) {
 }
 
 function isNotEmptyArray(array) {
-    if (array.length > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return array.length > 0 ? true : false;
 }
 
 function readInput() {
     let numArray = [];
     while (true) {
         let inputNum = prompt('Enter an integer (a negative integer to quit)');
-        if (isPosInteger(inputNum)) {
+        if (isInteger(inputNum) && inputNum > 0) {
             n = parseInt(inputNum);
             numArray.push(n);
-        } else if (isNegInteger(inputNum)) {
+        } else if (isInteger(inputNum) && inputNum < 0) {
             break;
         }
     }
     return numArray;
 }
 
-function calAverageArrayNum(list) {
+function calcAverageNumArray(list) {
     let x = 0;
     for (i = 0; i < list.length; i++) {
         x = x + list[i];
@@ -54,14 +37,25 @@ function calAverageArrayNum(list) {
     return (x / list.length);
 }
 
+function calcMinArrayNum(list) {
+    let toSortList = list.slice();
+    toSortList.sort(function(a, b){return a - b});
+    return toSortList[0];
+}
+
+function calcMaxArrayNum(list) {
+    let toSortList = list.slice();
+    toSortList.sort(function(a, b){return a - b});
+    return toSortList[toSortList.length - 1];
+}
+
 function displayStats(list) {
     if (isNotEmptyArray(list)) {
-        let originalList = list.slice();
-        list.sort(function(a, b){return a - b});
-        let avg = calAverageArrayNum(list);
-        let min = list[0];
-        let max = list[list.length - 1];  
-        return alert("For the list " + originalList + ", the average is " + avg + ", the minimum is " + min + ", and the maximum is " + max) //use <toFixed(n)> to fixed n decimal point
+        let avg = calcAverageNumArray(list);
+        let min = calcMinArrayNum(list);
+        let max = calcMaxArrayNum (list); 
+        return alert("For the list " + list + ", the average is " 
+                    + avg.toFixed(2) + ", the minimum is " + min + ", and the maximum is " + max)
     } else {
         return alert("For the list that is empty, the average is 0, the minimum is 0, the maximum is 0")
     }
