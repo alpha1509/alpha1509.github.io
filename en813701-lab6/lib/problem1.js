@@ -1,7 +1,7 @@
 let arrayPrime = [];
 let inputNum;
 outer: while (true) {
-    inputNum = prompt('Enter Positive Integer');
+    inputNum = prompt('Enter a positive integer');
     if (!isNaN(inputNum) && !inputNum.includes(".")) {
         var realNum = parseFloat(inputNum);
         if(Number.isInteger(realNum) && realNum > 0) {
@@ -22,4 +22,4 @@ outer: while (true) {
         }
     }
 }
-alert("For n = " + realNum + ", prime number are\n" + arrayPrime);
+alert("For n = " + realNum + ", prime numbers are\n" + arrayPrime);
