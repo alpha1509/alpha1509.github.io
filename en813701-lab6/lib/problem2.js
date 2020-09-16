@@ -1,14 +1,5 @@
 function isInteger (inputNum) {
-    if (!isNaN(inputNum) && !inputNum.includes(".")) {
-        let realNum = parseFloat(inputNum);
-        if(Number.isInteger(realNum)) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-        return false;
-    }
+    return (!isNaN(inputNum) && !inputNum.includes(".") && Number.isInteger(parseFloat(inputNum))) ? true: false;
 }
 
 function isNotEmptyArray(array) {
