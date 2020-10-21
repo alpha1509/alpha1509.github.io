@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/sign-up-style.css">
+        <style>
+            body {
+                background-image: url('images/signupTTRweb.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="navigation-bar">
+            <div id="navigation-container">
+                <a href="#tutorian"><img src="images/ttricon.jpg" alt="Tutorian logo" class="logo"></a>
+
+                <ul class="floatLeft">
+                    <li><a class="menus" href="#aboutUs">About Us</a></li>
+                </ul>
+                <ul class="floatRight">
+                    <li><a href="http://127.0.0.1:5500/login.html">Login</a></li>
+                    <li><a id ="signUpButtn" href="http://127.0.0.1:5500/sign-up.html">Sign Up</a></li>
+                </ul>
+               
+            </div>
+        </div>
+        <form>
+            <p id="signupHead">Sign Up</p>
+            <div class="container">
+              <label for="fname"><b>First Name <span><span style="color: red;"> *</span></b></label>
+              <input type="text" placeholder="Enter First Name" name="fname" required>
+              <label for="lname"><b>Last Name <span><span style="color: red;"> *</span></b></label>
+              <input type="text" placeholder="Enter Last Name" name="lname" required>
+              <label for="psw"><b>Password <span><span style="color: red;"> *</span></b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <label for="cfpsw"><b>Confirm Password <span><span style="color: red;"> *</span>
+            </b></label>
+              <input type="password" placeholder="Confirm Password" name="cfpsw" required>
+              <button type="submit" class="signupBtn">Sign Up</button>        
+            </div>
+            <div class="container paddingButtom25px">
+                <p class="signupText">By clicking the Sign Up button, you agree to our</p>
+                <p class="signupText"><a href="#termsAndConditions" style="color: #2fd19b; text-decoration: none;">Terms & Conditions</a>
+                    , and <a href="#privacyPolicy" style="color: #2fd19b; text-decoration: none;">Privacy Policy</a> </p>
+            </div>
+        </form>
+        <script>
+            document.getElementsByClassName('signupBtn')[0].onclick = function() {
+                location.href = "http://127.0.0.1:5500/profiles.html"
+            }
+        </script>
+    </body>
+</html>

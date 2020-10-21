@@ -1,0 +1,558 @@
+body {
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0 120px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    }
+
+    .logo {
+    float: left;
+    padding-right: 35px;
+    padding-top: 2px;
+    }
+    /* ~~ Top Navigation Bar ~~ */
+
+    #navigation-container {
+        width: 1600px;
+        margin: 0 auto;
+        height: 70px;
+    }
+
+    .navigation-bar {
+        margin: 0;
+        height: 85px;
+        width: 100%;
+        background-color: #63AFB5;
+        box-shadow: 2px 2px 5px 2px black;
+    }
+
+    .navigation-bar ul {
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    background: 0;
+    }
+
+    .navigation-bar .floatLeft {
+        float: left;
+    }
+    .navigation-bar .floatRight {
+        float: right;
+    }
+
+    .navigation-bar li {
+    list-style-type: none;
+    padding: 0px;
+    display: inline;
+    
+    }
+
+    .navigation-bar li a {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 65px;
+    padding: 5px 15px;
+    }
+
+    .def-avatar {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding-right: 8px;
+    }
+    .username:hover {
+        line-height: 50px;
+        background-color: #63a2a7;
+        border-radius: 40px;
+    }
+    .logOut {
+        font-size: 10px;
+        color: rgb(139, 139, 139);
+    }
+    .logOut:hover {
+        background-color: #63a2a7;
+        border-radius: 40px;
+    }
+
+    .header-pos {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        float: left;
+        color: white;
+        cursor: default;
+        margin: 24px 0px 0px 10px;
+    }
+    .header-background {
+        width: 100%;
+        height: 80px;
+        background-image: url('/images/courses-bg.png');
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .prof-avatar {
+        float: left;
+        margin: 8px 10px 0px 380px;
+        width: 60px;
+        height: 60px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .tabBar {
+        margin-top: 5px;
+        float: left;
+        width: 380px;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 700;
+        border: 2px solid  #6b6b6b;
+        border-radius: 15px;
+        background-color: white;
+ 
+    }
+    .tabBar:hover {
+        background-color: #6b6b6b;
+        color: white;
+        cursor: pointer;
+    }
+    .coursesTab {
+        background-color: #6b6b6b;
+        color: white;
+        float: left;
+    }
+    .calendarTab {
+        color:  #6b6b6b;
+        margin: 5px 30px 0px 30px;
+    }
+    .statTab {
+        color:  #6b6b6b;
+        float: right;
+    }
+
+.addBtn {
+    color: white;
+    background-color: #51D2AB;
+    width: 100px;
+    height: 35px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.addBtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.sortBtn {
+    color: rgb(83, 83, 83);
+    background-color: white;
+    float: right;
+    width: 100px;
+    height: 35px;
+    border-radius: 11px;
+    border: 2px solid rgb(83, 83, 83);
+    font-size: 16px;
+    font-weight: bold;
+}
+.sortBtn:hover {
+    background-color: rgb(116, 116, 116);
+    color: white;
+    cursor: pointer;
+}
+.add-sort-btn-container {
+    margin: 60px auto 30px auto;
+}
+.fisnied-checkbox {
+    float: right;
+    margin: 7px 18px 7px 7px;
+    font-size: 16px;
+    color:  rgb(83, 83, 83);
+}
+.courses-con {
+    width: 1200px;
+    height: 210px;
+    background-color: #EBFCFE;
+    box-shadow: 2px 4px 10px 0px rgba(0,0,0,0.64);
+    border-radius: 14px;
+    margin-bottom: 30px;
+}
+.courses-color-line-bg {
+    min-width: 100%;
+    height: 60px;
+    float: left;
+    margin-top: 30px;
+}
+.course-img {
+    float: left;
+    margin: -20px 10px 10px 20px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.course-name {
+    margin-left: 15px;
+    float: left;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 60px;
+    vertical-align: middle;
+    color: white;
+    text-shadow: 3px 2px 4px rgba(0,0,0,0.83);
+}
+.teacher {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color:  rgb(73, 73, 73);
+    line-height: 60px;
+    vertical-align: middle;
+    margin-right: 50px;
+}
+.courese-remaining {
+    float: left;
+    width: 1200px;
+    height: 60px;
+}
+.progress{
+    margin: 15px 0 10px 130px;
+    float: left;
+    width: 500px;
+    height: 30px;
+}
+.progress-bar {
+    height: 26px;
+    background-color: #5BDC79;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(75, 75, 75);
+}
+.progress-cover {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(160, 160, 160);
+}
+.remainig {
+    margin: 20px 10px 10px 30px;
+    float: left;
+    font-size: 18px;
+    font-weight: 600;
+    color:  rgb(75, 75, 75);
+}
+.next-class {
+    width: 500px;
+    float: left;
+    margin: 10px 10px 10px 134px;
+    font-size: 18px;
+    font-weight: 600;
+    color:  rgb(75, 75, 75);
+}
+.location {
+    margin: 10px 10px 10px 15px;
+    float: left;
+    width: 500px;
+    font-size: 18px;
+    font-weight: 600;
+    color:  rgb(75, 75, 75);
+}
+.locate-icon {
+    font-size: 20px;
+    color: rgb(75, 75, 75);
+    padding-right: 10px;
+}
+
+@media only screen and (max-width:500px) {
+    body {
+        margin: 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0 120px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+    
+        .logo {
+        float: left;
+        padding-right: 35px;
+        padding-top: 2px;
+        width: 100px;
+        }
+        /* ~~ Top Navigation Bar ~~ */
+    
+        #navigation-container {
+            width: 1600px;
+            margin: 0 auto;
+            height: 70px;
+        }
+    
+        .navigation-bar {
+            margin: 0;
+            height: 85px;
+            width: 100%;
+            background-color: #63AFB5;
+            box-shadow: 2px 2px 5px 2px black;
+        }
+    
+        .navigation-bar ul {
+        padding: 10px;
+        margin: 0px;
+        text-align: center;
+        background: 0;
+        }
+    
+        .navigation-bar .floatLeft {
+            float: left;
+        }
+        .navigation-bar .floatRight {
+            float: right;
+        }
+    
+        .navigation-bar li {
+        list-style-type: none;
+        padding: 0px;
+        display: inline;
+        
+        }
+    
+        .navigation-bar li a {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        line-height: 65px;
+        padding: 5px 15px;
+        }
+    
+        .def-avatar {
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding-right: 8px;
+        }
+        .username:hover {
+            line-height: 50px;
+            background-color: #63a2a7;
+            border-radius: 40px;
+        }
+        .logOut {
+            font-size: 10px;
+            color: rgb(139, 139, 139);
+        }
+        .logOut:hover {
+            background-color: #63a2a7;
+            border-radius: 40px;
+        }
+    
+        .header-pos {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            float: left;
+            color: white;
+            cursor: default;
+            margin: 24px 0px 0px 10px;
+        }
+        .header-background {
+            width: 100%;
+            height: 80px;
+            background-image: url('/images/courses-bg.png');
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .prof-avatar {
+            float: left;
+            margin: 8px 10px 0px 380px;
+            width: 60px;
+            height: 60px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+        .container {
+            margin: 0 auto;
+            width: 500px;
+        }
+        .tabBar {
+            margin-top: 5px;
+            float: left;
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid  #6b6b6b;
+            border-radius: 15px;
+            background-color: white;
+     
+        }
+        .tabBar:hover {
+            background-color: #6b6b6b;
+            color: white;
+            cursor: pointer;
+        }
+        .coursesTab {
+            background-color: #6b6b6b;
+            color: white;
+            float: left;
+        }
+        .calendarTab {
+            color:  #6b6b6b;
+            margin: 5px 30px 0px 30px;
+        }
+        .statTab {
+            color:  #6b6b6b;
+            float: right;
+        }
+    
+    .addBtn {
+        color: white;
+        background-color: #51D2AB;
+        width: 100px;
+        height: 35px;
+        border-radius: 11px;
+        border: 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .addBtn:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    .sortBtn {
+        color: rgb(83, 83, 83);
+        background-color: white;
+        float: right;
+        width: 100px;
+        height: 35px;
+        border-radius: 11px;
+        border: 2px solid rgb(83, 83, 83);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .sortBtn:hover {
+        background-color: rgb(116, 116, 116);
+        color: white;
+        cursor: pointer;
+    }
+    .add-sort-btn-container {
+        margin: 60px auto 30px auto;
+    }
+    .fisnied-checkbox {
+        float: right;
+        margin: 7px 18px 7px 7px;
+        font-size: 16px;
+        color:  rgb(83, 83, 83);
+    }
+    .courses-con {
+        width: 1200px;
+        height: 210px;
+        background-color: #EBFCFE;
+        box-shadow: 2px 4px 10px 0px rgba(0,0,0,0.64);
+        border-radius: 14px;
+        margin-bottom: 30px;
+    }
+    .courses-color-line-bg {
+        min-width: 100%;
+        height: 60px;
+        float: left;
+        margin-top: 30px;
+    }
+    .course-img {
+        float: left;
+        margin: -20px 10px 10px 20px;
+        width: 100px;
+        height: 100px;
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+    .course-name {
+        margin-left: 15px;
+        float: left;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 60px;
+        vertical-align: middle;
+        color: white;
+        text-shadow: 3px 2px 4px rgba(0,0,0,0.83);
+    }
+    .teacher {
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        color:  rgb(73, 73, 73);
+        line-height: 60px;
+        vertical-align: middle;
+        margin-right: 50px;
+    }
+    .courese-remaining {
+        float: left;
+        width: 1200px;
+        height: 60px;
+    }
+    .progress{
+        margin: 15px 0 10px 130px;
+        float: left;
+        width: 500px;
+        height: 30px;
+    }
+    .progress-bar {
+        height: 26px;
+        background-color: #5BDC79;
+        border-radius: 8px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 26px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(75, 75, 75);
+    }
+    .progress-cover {
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid rgb(160, 160, 160);
+    }
+    .remainig {
+        margin: 20px 10px 10px 30px;
+        float: left;
+        font-size: 18px;
+        font-weight: 600;
+        color:  rgb(75, 75, 75);
+    }
+    .next-class {
+        width: 500px;
+        float: left;
+        margin: 10px 10px 10px 134px;
+        font-size: 18px;
+        font-weight: 600;
+        color:  rgb(75, 75, 75);
+    }
+    .location {
+        margin: 10px 10px 10px 15px;
+        float: left;
+        width: 500px;
+        font-size: 18px;
+        font-weight: 600;
+        color:  rgb(75, 75, 75);
+    }
+    .locate-icon {
+        font-size: 20px;
+        color: rgb(75, 75, 75);
+        padding-right: 10px;
+    }
+}

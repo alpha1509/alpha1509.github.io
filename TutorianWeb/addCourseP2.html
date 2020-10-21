@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/addCourseP2.css">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="navigation-bar">
+            <div id="navigation-container">
+                <a href="#tutorian"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+
+                <ul class="floatLeft">
+                    <li><a class="menus" href="http://127.0.0.1:5500/profiles.html">My Profiles</a></li>
+                    <li><a class="menus" href="#aboutUs">About Us</a></li>
+                </ul>
+                <ul class="floatRight">
+                    <li><a href="#profile"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a></li>
+                    <li style="color: #505050;">|</li>
+                    <li><a href="http://127.0.0.1:5500/login.html" class="logOut">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-background">
+            <div>
+                <img src="images/avatar1.png" class="prof-avatar">
+            </div>
+            <div class="header-pos">Alpha's profile</div>
+        </div>
+        <div class="form">
+            <p id="creCourseHead">Create New Course</p>
+            <div class="container">
+                <div class = "inner_container">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>   
+                  <table class="dotTable" style="width:100%">
+                    <th>
+                        <span class="dot"></span>
+                        <span class="activedot"></span>
+                        
+                    </th>
+                  </table>
+                    <table style="width:100%">
+                        <tr>
+                          <td><button type="submit" class="cancelBtn">Cancel</button> </td>
+                          <td><button type="submit" class="confirmBtn">Confirm</button><button type="submit" class="backBtn">Back</button>  </td>
+                        </tr>
+                      </table>
+                    <br>
+                    <br>
+                    <br>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementsByClassName("confirmBtn")[0].onclick = function () {
+                location.href = "http://127.0.0.1:5500/courses.html";
+            };
+            document.getElementsByClassName("cancelBtn")[0].onclick = function () {
+                location.href = "http://127.0.0.1:5500/courses.html";
+            };
+            document.getElementsByClassName("backBtn")[0].onclick = function () {
+                location.href = "http://127.0.0.1:5500/addCourse.html";
+            };
+        </script>
+    </body>
+</html>

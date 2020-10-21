@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/login-style.css">
+        <style>
+            body {
+                background-image: url('images/index-bg.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 54px;
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="navigation-bar">
+            <div id="navigation-container">
+                <a href="#tutorian"><img src="images/tutorian-logo.png" alt="Tutorian logo" class="logo"></a>
+
+                <ul class="floatLeft">
+                    <li><a class="menus" href="#aboutUs">About Us</a></li>
+                </ul>
+                <ul class="floatRight">
+                    <li><a id ="signUpButtn" href="http://127.0.0.1:5500/sign-up.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1>Manage your course more easily</h1>
+
+        <form>
+            <p id="loginHead">Login</p>
+            <div class="container">
+              <label for="uname"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="uname" required style="margin-top: 4px;">
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required style="margin-top: 4px;">
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+              <a href="#forgotPassword" class="forgotPsw">Forgot password?</a>
+              <button type="submit" class="loginBtn">Login</button>        
+            </div>
+            <div class="container paddingButtom25px">
+                <p class="loginText">or login with</p>
+                <div class="loginWithOthers">
+                    <a href="#facebookLogin"><img src="images/facebook.png" alt="facebook" class="icon"></a>
+                    <a href="#googleLogin"><img src="images/google.png" alt="google" class="icon"></a>
+                </div>
+                <p class="loginText">Don't have an account? <a href="http://127.0.0.1:5500/sign-up.html" class="sign-up-word">Sign Up!</a></p>
+            </div>
+        </form>
+
+        <script>
+            document.getElementsByClassName('loginBtn')[0].onclick = function() {
+                location.href = "http://127.0.0.1:5500/profiles.html"
+            }
+        </script>
+    </body>
+</html>

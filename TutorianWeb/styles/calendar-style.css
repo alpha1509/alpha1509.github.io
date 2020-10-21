@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0 120px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    }
+
+    .logo {
+    float: left;
+    padding-right: 35px;
+    padding-top: 2px;
+    }
+    /* ~~ Top Navigation Bar ~~ */
+
+    #navigation-container {
+        width: 1600px;
+        margin: 0 auto;
+        height: 70px;
+    }
+
+    .navigation-bar {
+        margin: 0;
+        height: 85px;
+        width: 100%;
+        background-color: #63AFB5;
+        box-shadow: 2px 2px 5px 2px black;
+    }
+
+    .navigation-bar ul {
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    background: 0;
+    }
+
+    .navigation-bar .floatLeft {
+        float: left;
+    }
+    .navigation-bar .floatRight {
+        float: right;
+    }
+
+    .navigation-bar li {
+    list-style-type: none;
+    padding: 0px;
+    display: inline;
+    
+    }
+
+    .navigation-bar li a {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 65px;
+    padding: 5px 15px;
+    }
+
+    .def-avatar {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding-right: 8px;
+    }
+    .username:hover {
+        line-height: 50px;
+        background-color: #63a2a7;
+        border-radius: 40px;
+    }
+    .logOut {
+        font-size: 10px;
+        color: rgb(139, 139, 139);
+    }
+    .logOut:hover {
+        background-color: #63a2a7;
+        border-radius: 40px;
+    }
+
+    .header-pos {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        float: left;
+        color: rgb(255, 255, 255);
+        cursor: default;
+        margin: 24px 0px 0px 10px;
+    }
+    .header-background {
+        width: 100%;
+        height: 80px;
+        background-image: url('/images/courses-bg.png');
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    /*
+    .header-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
+    }
+    .header-background .profileBG {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }*/
+    .prof-avatar {
+        float: left;
+        margin: 8px 10px 0px 380px;
+        width: 60px;
+        height: 60px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .tabBar {
+        margin-top: 5px;
+        float: left;
+        width: 380px;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 700;
+        border: 2px solid  #6b6b6b;
+        border-radius: 15px;
+        background-color: white;
+ 
+    }
+    .tabBar:hover {
+        background-color: #6b6b6b;
+        color: white;
+        cursor: pointer;
+    }
+    .calendarTab {
+        background-color: #6b6b6b;
+        color: white;
+        float: left;
+        margin: 5px 30px 0px 30px;
+    }
+    .coursesTab {
+        color:  #6b6b6b;
+        float: left;
+        
+    }
+    .statTab {
+        color:  #6b6b6b;
+        float: right;
+    }
+
+    .calendar-container {
+        width: 1800px;
+        height: 600px;
+        margin: 80px auto;
+        background-color: #A1EBD5;
+        border-radius: 40px;
+    }
+    .calendar-info {
+        width: 400px;
+        height: 540px;
+        margin: 30px 30px 20px 30px;
+        float: left;
+    }
+    .today {
+        width: 400px;
+        height: 70px;
+        background-color: #F1FEFF;
+        margin-bottom: 30px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 70px; 
+        font-size: 34px;
+        font-weight: bold;
+        color: rgb(82, 82, 82);
+        box-shadow: 4px 4px 23px -9px rgba(0,0,0,0.75);
+    }
+    .today:hover {
+        background-color:#dcf7fa;
+        cursor: pointer;
+    }
+
+    .today-classes {
+        width: 400px;
+        height: 440px;
+        background-color: #F1FEFF;
+        border-radius: 25px;
+    }
+    .today-class-header {
+        padding: 30px 0 5px 30px;
+        font-size: 24px;
+        color: rgb(82, 82, 82);
+        font-weight: 580;
+    }
+    .classes {
+        width: 340px;
+        height: 70px;
+        margin: 10px auto;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+    .padding-top-10px {
+        padding-top: 10px;
+    }
+    .margin-bottom-5px {
+        margin-bottom: 5px;
+    }
+    .margin-bottom-10px {
+        margin-bottom: 10px;
+    }
+    .margin-top-5px {
+        margin-top: 5px;
+    }
+
+    .the-calendar {
+        width: 1300px;
+        height: 576px;
+        background-color: #F3FFFF;
+        float: left;
+        margin: 12px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.75);
+    }
+    

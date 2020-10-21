@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/calendar-style.css">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navigation-bar">
+            <div id="navigation-container">
+                <a href="#tutorian"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+
+                <ul class="floatLeft">
+                    <li><a class="menus" href="http://127.0.0.1:5500/profiles.html">My Profiles</a></li>
+                    <li><a class="menus" href="#aboutUs">About Us</a></li>
+                </ul>
+                <ul class="floatRight">
+                    <li><a href="#profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a></li>
+                    <li style="color: #505050;">|</li>
+                    <li><a href="http://127.0.0.1:5500/login.html" class="logOut">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-background">
+            <div>
+                <img src="images/avatar1.png" class="prof-avatar">
+            </div>
+            <div class="header-pos">Alpha's profile</div>
+        </div>
+        <div class="container">
+            <button id = "courses" class="coursesTab tabBar">Courses</button>
+            <button id="calendar" class="calendarTab tabBar">Calendar</button>
+            <button id="stat" class="statTab tabBar">Statistics</button>
+        </div>
+        <div class="calendar-container">
+            <div class="calendar-info">
+                <div class="today">1 September 2020</div>
+                <div class="today-classes">
+                    <p class="today-class-header">Today's Class</p>
+                    <div class="classes" style="background-color: #579AFF;">
+                        <p class="padding-top-10px margin-bottom-5px">Computor Programming</p>
+                        <p class="margin-top-5px margin-bottom-10px">9:00 - 12:00</p>
+                    </div>
+                    <div class="classes" style="background-color: #BB77FF;">
+                        <p class="padding-top-10px margin-bottom-5px">Drawing and Sketching</p>
+                        <p class="margin-top-5px margin-bottom-10px">16:00 - 17:30</p>
+                    </div>
+                </div>
+            </div>
+            <div class="the-calendar">
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="scripts/redirect.js"></script>
+    </body>
+</html>

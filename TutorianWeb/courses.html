@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/courses-style.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navigation-bar">
+            <div id="navigation-container">
+                <a href="#tutorian"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+
+                <ul class="floatLeft">
+                    <li><a class="menus" href="http://127.0.0.1:5500/profiles.html">My Profiles</a></li>
+                    <li><a class="menus" href="#aboutUs">About Us</a></li>
+                </ul>
+                <ul class="floatRight">
+                    <li><a href="#profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a></li>
+                    <li style="color: #505050;">|</li>
+                    <li><a href="http://127.0.0.1:5500/login.html" class="logOut">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-background">
+            <div>
+                <img src="images/avatar1.png" class="prof-avatar">
+            </div>
+            <div class="header-pos">Alpha's profile</div>
+        </div>
+        <div class="container">
+            <button class="coursesTab tabBar">Courses</button>
+            <button class="calendarTab tabBar">Calendar</button>
+            <button class="statTab tabBar">Statistics</button>
+        </div>
+        <div class="container add-sort-btn-container">
+            <button class="addBtn">+ Add</button>
+            <button class="sortBtn"><i class="fas fa-sort-amount-down"></i>Sort by</button>
+            <div class="fisnied-checkbox">
+                    <input type="checkbox" checked="checked" name="inc-finished"> Include finished course
+            </div>
+        </div>
+        <div class="container">
+            <div class="courses-con">
+                <div class="courses-color-line-bg" style="background-color: #52d8e7;">
+                    <div>
+                    <img src="images/com-pro-img.jpg" class="course-img">
+                    </div>
+                    <div class="course-name">Computor Programming</div>
+                    <div class="teacher">Kanda Saikaew</div>
+                </div>
+                <div class="courese-remaining">
+                    <div class="progress">
+                        <div class="progress-cover">
+                            <div class="progress-bar" style="width:80%">80%</div>
+                        </div>
+                    </div>
+                    <div class="remainig">8 hours remaining.</div>
+                </div>
+                <p class="next-class">Next class on 23 August, 16:00 - 19:00</p>
+                <div class="location"><i class="fas fa-map-marker-alt locate-icon"></i>EN4101 Computer Engineering Department, KKU</div>
+            </div>
+            <div class="courses-con">
+                <div class="courses-color-line-bg" style="background-color: #aee752;">
+                    <div>
+                    <img src="images/eng-img.png" class="course-img">
+                    </div>
+                    <div class="course-name">English for Engineering</div>
+                    <div class="teacher">Albert Einstein</div>
+                </div>
+                <div class="courese-remaining">
+                    <div class="progress">
+                        <div class="progress-cover">
+                            <div class="progress-bar" style="width:17%">17%</div>
+                        </div>
+                    </div>
+                    <div class="remainig">20 classes remaining.</div>
+                </div>
+                <p class="next-class">Next class on 24 August, 9:00 - 10:30</p>
+                <div class="location"><i class="fas fa-map-marker-alt locate-icon"></i>KKU Library</div>
+            </div>
+            <div class="courses-con">
+                <div class="courses-color-line-bg" style="background-color: #e7d852;">
+                    <div>
+                    <img src="images/swimming-img.jpg" class="course-img">
+                    </div>
+                    <div class="course-name">Swimmimg</div>
+                    <div class="teacher">P'Tom</div>
+                </div>
+                <div class="courese-remaining">
+                    <div class="progress">
+                        <div class="progress-cover">
+                            <div class="progress-bar" style="width:60%">60%</div>
+                        </div>
+                    </div>
+                    <div class="remainig">2 classes remaining.</div>
+                </div>
+                <p class="next-class">Next class on 27 August, 12:00 - 14:00</p>
+                <div class="location"><i class="fas fa-map-marker-alt locate-icon"></i>Awesome Swimming Pool</div>
+            </div>
+        </div>
+
+        <script src="scripts/redirect.js"></script>
+        <script>
+            document.getElementsByClassName("addBtn")[0].onclick = function () {
+                location.href = "http://127.0.0.1:5500/addCourse.html";
+            };
+        </script>
+    </body>
+</html>
