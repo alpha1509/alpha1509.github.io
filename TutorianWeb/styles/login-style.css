@@ -165,12 +165,12 @@ ul {
 @media only screen and (max-width:700px) {
     .logo {
         float: left;
-        width: 150px;
+        width: 100px;
         padding-right: 0px;
         padding-top: 0px;
         }
     .navigation-bar {
-        width: 125vw;
+        width: 100vw;
     }
     .navigation-bar li {
         list-style-type: none;
@@ -180,34 +180,55 @@ ul {
     }
     
     .navigation-bar li a {
-        color: rgb(255, 255, 255);
-        font-size: 18px;
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        line-height: 60px;
+        font-size: 16px;
+        line-height: 30px;
         padding: 5px 15px;
     }
 
     #navigation-container {
         width: auto;
     }
+    #signUpButtn {
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 8px 20px;
+        border-radius: 20px;
+    }
     h1 {
         margin-top: 35px;
-        width: 125vw;
-        font-size: 24px;
+        width: 98vw;
+        font-size: 22px;
     }
 
     form {
-        width: 110vw;
+        width: 96vw;
         margin: auto;
         margin-top: 50px;
-        margin-left: 25px;
+        margin-left: 0px;
     }
     label, input, .forgotPsw, .sign-up-word, .loginText {
-        font-size: 16px;
+        font-size: 14px;
     }
+    .loginText {
+        margin: 7px 0;
+    }
+    input[type=text], input[type=password] {
+        height: 40px;
+        margin: 7px 0;
+    }
+    .loginBtn {
+        font-size: 18px;
+        padding: 0px 0px;
+        margin: 15px 0;
+        width: 100%;
+        height: 40px;
+        }
     #loginHead {
-        font-size: 30px;
+        font-size: 28px;
+    }
+    .icon {
+        margin: 0 10px;
+        width: 50px;
     }
 
 }
