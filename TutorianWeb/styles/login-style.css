@@ -65,7 +65,13 @@ ul {
     #signUpButtn:hover{
         background-color: #00c09a;
     }
-
+    h1 {
+        text-align: center;
+        font-size: 54px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    }
 
     form {
         background-color: #E8F1F5;
@@ -194,10 +200,8 @@ ul {
         padding: 8px 20px;
         border-radius: 20px;
     }
-    #header-page {
-        margin-top: 35px;
-        width: 100%;
-        font-size: 18px;
+    h1 {
+        font-size: 30px;
     }
 
     form {
