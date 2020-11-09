@@ -194,10 +194,10 @@ ul {
         padding: 8px 20px;
         border-radius: 20px;
     }
-    h1 {
+    #header-page {
         margin-top: 35px;
-        width: 98vw;
-        font-size: 18px;
+        width: 100%;
+        font-size: 30px;
     }
 
     form {
