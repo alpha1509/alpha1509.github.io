@@ -161,3 +161,53 @@ ul {
     .sign-up-word:hover {
         text-decoration: underline;
     }
+
+@media only screen and (max-width:700px) {
+    .logo {
+        float: left;
+        width: 150px;
+        padding-right: 0px;
+        padding-top: 0px;
+        }
+    .navigation-bar {
+        width: 125vw;
+    }
+    .navigation-bar li {
+        list-style-type: none;
+        padding: 0px;
+        display: inline;
+        
+    }
+    
+    .navigation-bar li a {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 5px 15px;
+    }
+
+    #navigation-container {
+        width: auto;
+    }
+    h1 {
+        margin-top: 35px;
+        width: 125vw;
+        font-size: 24px;
+    }
+
+    form {
+        width: 110vw;
+        margin: auto;
+        margin-top: 50px;
+        margin-left: 25px;
+    }
+    label, input, .forgotPsw, .sign-up-word, .loginText {
+        font-size: 16px;
+    }
+    #loginHead {
+        font-size: 30px;
+    }
+
+}
