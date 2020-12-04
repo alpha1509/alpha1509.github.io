@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div className="App">
+            <GoogleLogin
+            clientId="1026510163617-5646auu1f10r7hnnr9i5gh595tp6b6u7.apps.googleusercontent.com",
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={"single_host_origin"}
+            />
+            </div>
+        <script>
+            import React from "react";
+            import ReactDOM from 'react-dom';
+            import GoogleLogin from 'react-google-login';
+
+            const responseGoogle = (response) => {
+            console.log(response);
+            };
+
+            function App() {
+                return (
+                    <div className="App">
+                    <GoogleLogin
+                    clientId="1026510163617-5646auu1f10r7hnnr9i5gh595tp6b6u7.apps.googleusercontent.com"
+                    buttonText="Login"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                    />
+                    </div>
+                );
+            }
+            ReactDOM.render(
+            <React.StrictMode>
+                <App />
+            </React.StrictMode>,
+            document.getElementById('root')
+            );
+        </script>
+    </body>
+</html>

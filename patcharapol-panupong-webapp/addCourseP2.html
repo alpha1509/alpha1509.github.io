@@ -4,6 +4,7 @@
         <title>Tutorian</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/addCourseP2.css">
         <style>
             body {
@@ -15,20 +16,17 @@
     </head>
 
     <body>
-        <div class="navigation-bar">
-            <div id="navigation-container">
-                <a href="#tutorian"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
-
-                <ul class="floatLeft">
-                    <li><a class="menus" href="http://127.0.0.1:5500/profiles.html">My Profiles</a></li>
-                    <li><a class="menus" href="#aboutUs">About Us</a></li>
-                </ul>
-                <ul class="floatRight">
-                    <li><a href="#profile"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a></li>
-                    <li style="color: #505050;">|</li>
-                    <li><a href="http://127.0.0.1:5500/login.html" class="logOut">Log out</a></li>
-                </ul>
-            </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#tutorian" class="logo-bar"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+            <a class="menus" href="http://127.0.0.1:5500/profiles.html" id="myProfile">My Profiles</a>
+            <a class="menus" href="#aboutUs">About Us</a>
+            
+            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-first">Log out</a>
+            <a href="#user-profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
+            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-second">Log out</a>
+            <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
+              <i class="fa fa-bars"></i>
+            </a>
         </div>
         <div class="header-background">
             <div>
@@ -40,27 +38,138 @@
             <p id="creCourseHead">Create New Course</p>
             <div class="container">
                 <div class = "inner_container">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <label for="amountCourse">Totol Amount of Course Time<span style="color: red;"> *</span></label>
+                                <input type="number" id="amountCourse" name="amountCourse" min="1" required>
+                            </td>
+                            <td>
+                                <label for="timeType">Course Time Type<span style="color: red;"> *</span></label>
+                                <select name="timeType" id="timeType">
+                                    <option value="hours">Hours</option>
+                                    <option value="classes">Classes</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="startDate">Course Start Date<span style="color: red;"> *</span></label>
+                                <input type="date" id="startDate" name="startDate"  required>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="endDate">Course End Date</label>
+                                <input type="date" id="endDate" name="endDate" disabled="true">
+                            </td>
+                            <td>
+                                <label id="enableEnd"><input type="checkbox" name="enableEnd"> Enable</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table id="select-day-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="sunday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="sun"><span>Sunday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="sunStart" class="sun day-date" name="sunStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="sunEnd" class="sun day-date" name="sunEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="monday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="mon"><span>Monday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="monStart" class="mon day-date" name="monStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="monEnd" class="mon day-date" name="monEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="tuesday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="tue"><span>Tuesday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="tueStart" class="tue day-date" name="tueStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="tueEnd" class="tue day-date" name="tueEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="wednesday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="wed"><span>Wednesday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="wedStart" class="wed day-date" name="wedStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="wedEnd" class="wed day-date" name="wedEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="thursday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="thur"><span>Thursday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="thurStart" class="thur day-date" name="thurStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="thurEnd" class="thur day-date" name="thurEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="friday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="fri"><span>Friday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="friStart" class="fri day-date" name="friStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="friEnd" class="fri day-date" name="friEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="saturday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="sat"><span>Saturday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="satStart" class="sat day-date" name="satStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="satEnd" class="sat day-date" name="satEnd" disabled="true">
+                            </th>
+                        </tr>
+                    </table>
                 </div>   
                   <table class="dotTable" style="width:100%">
                     <th>
@@ -75,13 +184,37 @@
                           <td><button type="submit" class="confirmBtn">Confirm</button><button type="submit" class="backBtn">Back</button>  </td>
                         </tr>
                       </table>
-                    <br>
-                    <br>
-                    <br>
             </div>
         </div>
         
         <script>
+            var endDateCheck = document.querySelector("input[name=enableEnd]");
+            endDateCheck.addEventListener('change', function() {
+                if(this.checked) {
+                    document.getElementById('endDate').disabled = false;
+                } else {
+                    document.getElementById('endDate').disabled = true;
+                }
+            });
+
+            var dayCheck = document.querySelectorAll("input[class=dayCheck]")
+            for (day of dayCheck) {
+                day.addEventListener('change', function() {
+                    if (this.checked) {
+                        var dayEnable = document.getElementsByClassName(this.name);
+                        for (n of dayEnable) {
+                            n.disabled = false;
+                        }
+                    } else {
+                        var dayEnable = document.getElementsByClassName(this.name);
+                        for (n of dayEnable) {
+                            n.disabled = true;
+                        }
+                    };
+                });
+            }
+
+
             document.getElementsByClassName("confirmBtn")[0].onclick = function () {
                 location.href = "http://127.0.0.1:5500/courses.html";
             };
@@ -92,5 +225,29 @@
                 location.href = "http://127.0.0.1:5500/addCourse.html";
             };
         </script>
+        <script>
+            //-----**functions for responsive navigation bar**--------
+            function responNavbar() {
+               var x = document.getElementById("myTopnav");
+               if (x.className === "topnav") {
+                   x.className += " responsive";
+               } else {
+                   x.className = "topnav";
+               }
+           }
+           function screenWidth(x) {
+               if (x.matches) { // If media query matches
+                   document.getElementById('logout-first').style.display = "none";
+                   document.getElementById('logout-second').style.display = "";
+               } else {
+                   document.getElementById('logout-first').style.display = "flex";
+                   document.getElementById('logout-second').style.display = "none";
+               }
+           }
+           var x = window.matchMedia("(max-width: 700px)")
+           screenWidth(x) // Call listener function at run time
+           x.addListener(screenWidth) // Attach listener function on state changes
+           //--------**End of functions for responsive navigation bar**-------
+       </script>
     </body>
 </html>

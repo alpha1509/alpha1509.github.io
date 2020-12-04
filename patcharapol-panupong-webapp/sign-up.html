@@ -36,16 +36,19 @@
         <form>
             <p id="signupHead">Sign Up</p>
             <div class="container">
-              <label for="fname"><b>First Name <span><span style="color: red;"> *</span></b></label>
-              <input type="text" placeholder="Enter First Name" name="fname" required>
-              <label for="lname"><b>Last Name <span><span style="color: red;"> *</span></b></label>
-              <input type="text" placeholder="Enter Last Name" name="lname" required>
-              <label for="psw"><b>Password <span><span style="color: red;"> *</span></b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-              <label for="cfpsw"><b>Confirm Password <span><span style="color: red;"> *</span>
-            </b></label>
-              <input type="password" placeholder="Confirm Password" name="cfpsw" required>
-              <button type="submit" class="signupBtn">Sign Up</button>        
+                <label for="email"><b>Email <span><span style="color: red;"> *</span></b></label>
+                <input type="email" placeholder="Enter Email" name="email" id="inputEmail" required>
+                <label for="psw"><b>Password <span><span style="color: red;"> *</span></b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="cfpsw"><b>Confirm Password <span><span style="color: red;"> *</span></b></label>
+                <input type="password" placeholder="Confirm Password" name="cfpsw" required>
+
+                <label for="fname"><b>First Name <span><span style="color: red;"> *</span></b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" required>
+                <label for="lname"><b>Last Name <span><span style="color: red;"> *</span></b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required>
+                
+                <button type="submit" class="signupBtn" id="signup">Sign Up</button>        
             </div>
             <div class="container paddingButtom25px">
                 <p class="signupText">By clicking the Sign Up button, you agree to our</p>
@@ -54,6 +57,39 @@
             </div>
         </form>
         <script>
+            //---email validator----
+            var btn = document.getElementById('signup');
+            btn.onclick = checkEmail();
+
+            function checkEmail() {
+                var inputEmail = document.getElementById("inputEmail").value;
+                var unirest = require("unirest");
+                var req = unirest("GET", "https://rapidapi.p.rapidapi.com/v2/validate");
+                req.query({
+                    "ip_address": inputEmail,
+                    "email": inputEmail
+                });
+                req.headers({
+                    "x-rapidapi-key": "a005cde6ffmsh1a4cf16de2469efp176760jsn236def3507e3",
+                    "x-rapidapi-host": "zerobounce1.p.rapidapi.com",
+                    "useQueryString": true
+                });
+                req.end(function (res) {
+                    if (res.error) throw new Error(res.error);
+                    console.log(res.body);
+                });
+                var status = req.body.status;
+                var did_you_mean = req.body.did_you_mean;
+                if (status === 'invalid') {
+                    if (did_you_mean != null) {
+                        alert('Email address is invalid, please enter again.\nDid you mean "' + did_you_mean + '"');
+                    }
+                    alert('Email address is invalid, please enter again.');
+                }
+            };
+            
+
+            //----redirection-----
             document.getElementsByClassName('signupBtn')[0].onclick = function() {
                 location.href = "http://127.0.0.1:5500/profiles.html"
             }
