@@ -426,7 +426,7 @@ ul {
         .tabBar {
             margin-top: 12px;
             float: left;
-            width: 80px;
+            width: 100px;
             height: 40px;
             font-size: 14px;
             font-weight: 700;
@@ -447,7 +447,7 @@ ul {
         }
         .calendarTab {
             color:  #6b6b6b;
-            margin: 12px 0px 0px 20px;
+            margin: 12px 0px 0px 22px;
         }
         .statTab {
             color:  #6b6b6b;
@@ -539,7 +539,7 @@ ul {
     }
     .courese-remaining {
         float: left;
-        width: 250%;
+        width: 270%;
         height: 60px;
     }
     .progress{
