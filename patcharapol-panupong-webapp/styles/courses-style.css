@@ -447,6 +447,7 @@ ul {
         }
         .calendarTab {
             color:  #6b6b6b;
+            margin: 12px 0px 0px 24px;
         }
         .statTab {
             color:  #6b6b6b;
@@ -538,7 +539,7 @@ ul {
     }
     .courese-remaining {
         float: left;
-        width: 1200px;
+        width: 1100px;
         height: 60px;
     }
     .progress{
@@ -573,7 +574,7 @@ ul {
         color:  rgb(75, 75, 75);
     }
     .next-class {
-        width: 150px;
+        width: 40%;
         float: left;
         margin: 0px 10px 10px 20px;
         font-size: 10px;
@@ -583,7 +584,7 @@ ul {
     .location {
         margin: 0px 10px 10px 15px;
         float: left;
-        width: 150px;
+        width: 40%;
         font-size: 10px;
         font-weight: 600;
         color:  rgb(75, 75, 75);

@@ -488,9 +488,6 @@ ul {
     td {
         width:10%;
     }
-    #amountCourse {
-        margin-top: 18px;
-    }
     input[type="text"], input[type="number"],input[type="date"], select {
         width: 90%;
         height: 40px;
@@ -506,7 +503,7 @@ ul {
     }
     
     .ck_btn label {
-        width: 80px;
+        width: 94px;
     }
     #select-day-table {
         width: 50%;
