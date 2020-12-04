@@ -447,7 +447,7 @@ ul {
         }
         .calendarTab {
             color:  #6b6b6b;
-            margin: 12px 0px 0px 24px;
+            margin: 12px 0px 0px 20px;
         }
         .statTab {
             color:  #6b6b6b;
@@ -574,7 +574,7 @@ ul {
         color:  rgb(75, 75, 75);
     }
     .next-class {
-        width: 40%;
+        width: 35%;
         float: left;
         margin: 0px 10px 10px 20px;
         font-size: 10px;
