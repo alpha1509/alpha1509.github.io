@@ -1,5 +1,6 @@
 document.getElementsByClassName('loginBtn')[0].onclick = function() {
-    location.href = "../profiles";
+    var pathname = window.location.pathname; 
+    location.href = "/"+ pathname +"/profiles";
 }
 //    
 // let login_correct = false;
