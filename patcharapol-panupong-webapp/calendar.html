@@ -1,86 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tutorian</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles/calendar-style.css">
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-        </style>
-    </head>
 
-    <body>
-        <div class="topnav" id="myTopnav">
-            <a href="#tutorian" class="logo-bar"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
-            <a class="menus" href="http://127.0.0.1:5500/profiles.html" id="myProfile">My Profiles</a>
-            <a class="menus" href="#aboutUs">About Us</a>
-            
-            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-first">Log out</a>
-            <a href="#user-profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
-            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-second">Log out</a>
-            <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
-              <i class="fa fa-bars"></i>
-            </a>
+<head>
+    <title>Tutorian</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/calendar-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body onLoad="renderTime()">
+    <div class="topnav" id="myTopnav">
+        <a href="#tutorian" class="logo-bar"><img src="/static/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+        <a class="menus" id="myProfile">My Profiles</a>
+        <a class="menus" href="#aboutUs">About Us</a>
+
+        <a href="/login" class="logOut" id="logout-first">Log out</a>
+        <a href="#user-profile" class="username"><img src="/static/avatar-default.png" class="def-avatar">Panupong
+            Chimmai</a>
+        <a href="/login" class="logOut" id="logout-second">Log out</a>
+        <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="header-background">
+        <div>
+            <img src="/static/pavatar.jpg" class="prof-avatar">
         </div>
-        <div class="header-background">
-            <div>
-                <img src="images/avatar1.png" class="prof-avatar">
-            </div>
-            <div class="header-pos">Alpha's profile</div>
-        </div>
-        <div class="container">
-            <button id = "courses" class="coursesTab tabBar">Courses</button>
-            <button id="calendar" class="calendarTab tabBar">Calendar</button>
-            <button id="stat" class="statTab tabBar">Statistics</button>
-        </div>
-        <div class="calendar-container">
-            <div class="calendar-info">
-                <div class="today">1 September 2020</div>
-                <div class="today-classes">
-                    <p class="today-class-header">Today's Class</p>
-                    <div class="classes" style="background-color: #579AFF;">
-                        <p class="padding-top-10px margin-bottom-5px">Computor Programming</p>
-                        <p class="margin-top-5px margin-bottom-10px">9:00 - 12:00</p>
-                    </div>
-                    <div class="classes" style="background-color: #BB77FF;">
-                        <p class="padding-top-10px margin-bottom-5px">Drawing and Sketching</p>
-                        <p class="margin-top-5px margin-bottom-10px">16:00 - 17:30</p>
-                    </div>
+        <div class="header-pos">Alpha's profile</div>
+    </div>
+    <div class="container">
+        <button id="courses" class="coursesTab tabBar">Courses</button>
+        <button id="calendar" class="calendarTab tabBar">Calendar</button>
+        <button id="stat" class="statTab tabBar">Statistics</button>
+    </div>
+    <div class="calendar-container">
+        <div class="calendar-info">
+            <div id="clockDisplay" class="today"></div>
+            <div class="today-classes">
+                <p class="today-class-header">Today's Class</p>
+                <div class="classes" style="background-color: #579AFF;">
+                    <p class="padding-top-10px margin-bottom-5px">Computor Programming</p>
+                    <p class="margin-top-5px margin-bottom-10px">9:00 - 12:00</p>
                 </div>
             </div>
-            <div class="the-calendar">
-
-            </div>
         </div>
+        <div id="the-calendar">
 
-        <script type="text/javascript" src="scripts/redirect.js"></script>
-        <script>
-             //-----**functions for responsive navigation bar**--------
-             function responNavbar() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-            function screenWidth(x) {
-                if (x.matches) { // If media query matches
-                    document.getElementById('logout-first').style.display = "none";
-                    document.getElementById('logout-second').style.display = "";
-                } else {
-                    document.getElementById('logout-first').style.display = "flex";
-                    document.getElementById('logout-second').style.display = "none";
-                }
-            }
-            var x = window.matchMedia("(max-width: 700px)")
-            screenWidth(x) // Call listener function at run time
-            x.addListener(screenWidth) // Attach listener function on state changes
-            //--------**End of functions for responsive navigation bar**-------
-        </script>
-    </body>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/redirect.js"></script>
+    <script src="/static//date.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"></script>
+    <script src="/static/calendar.js"></script>
+ 
+</body>
+
 </html>

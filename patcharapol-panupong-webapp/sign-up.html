@@ -4,10 +4,10 @@
         <title>Tutorian</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/sign-up-style.css">
+        <link rel="stylesheet" href="/static/sign-up-style.css">
         <style>
             body {
-                background-image: url('images/signupTTRweb.jpg');
+                background-image: url('/static/signupTTRweb.jpg');
                 background-repeat: no-repeat;
                 background-attachment: fixed;  
                 background-size: cover;
@@ -15,84 +15,75 @@
             }
 
         </style>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script> -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script> -->
     </head>
 
     <body>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> -->
+
+        <script>
+        // // Your web app's Firebase configuration
+        // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // var firebaseConfig = {
+        //     apiKey: "AIzaSyCyYMkWDfp4sN9Pf5J7zrId1gXD6tnapNQ",
+        //     authDomain: "tutorian-f39d3.firebaseapp.com",
+        //     projectId: "tutorian-f39d3",
+        //     storageBucket: "tutorian-f39d3.appspot.com",
+        //     messagingSenderId: "955435679838",
+        //     appId: "1:955435679838:web:0fdb1fd7ce0bec8a1334cf",
+        //     measurementId: "G-VCXLPPRG7N"
+        // };
+        // // Initialize Firebase
+        // firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+        // const db = firebase.firestore();
+        </script>
         
         <div class="navigation-bar">
             <div id="navigation-container">
-                <a href="#tutorian"><img src="images/ttricon.jpg" alt="Tutorian logo" class="logo"></a>
+                <a href="#tutorian"><img src="/static/ttricon.jpg" alt="Tutorian logo" class="logo"></a>
 
                 <ul class="floatLeft">
-                    <li><a class="menus" href="#aboutUs">About Us</a></li>
+                    <li><a id ="aboutButtn" class="menus" href="#aboutUs">About Us</a></li>
                 </ul>
                 <ul class="floatRight">
-                    <li><a href="http://127.0.0.1:5500/login.html">Login</a></li>
-                    <li><a id ="signUpButtn" href="http://127.0.0.1:5500/sign-up.html">Sign Up</a></li>
+                    <li><a id ="loginButtn" href="/login">Login</a></li>
+                    <li><a id ="signUpButtn" href="/sign-up">Sign Up</a></li>
                 </ul>
                
             </div>
         </div>
-        <form>
+        <form action = "/sign-up" method = "POST" id='signup-form'>
             <p id="signupHead">Sign Up</p>
             <div class="container">
-                <label for="email"><b>Email <span><span style="color: red;"> *</span></b></label>
-                <input type="email" placeholder="Enter Email" name="email" id="inputEmail" required>
+                <label for="email"><b>Email Address<span><span style="color: red;"> *</span></b></label>
+                <input type="email" placeholder="Enter Email Address" name="email" id="inputEmail" required>
                 <label for="psw"><b>Password <span><span style="color: red;"> *</span></b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
                 <label for="cfpsw"><b>Confirm Password <span><span style="color: red;"> *</span></b></label>
-                <input type="password" placeholder="Confirm Password" name="cfpsw" required>
+                <input type="password" placeholder="Confirm Password" name="cfpsw" id="cfpsw" required>
 
                 <label for="fname"><b>First Name <span><span style="color: red;"> *</span></b></label>
-                <input type="text" placeholder="Enter First Name" name="fname" required>
+                <input type="text" placeholder="Enter First Name" name="fname" id="fname" required>
                 <label for="lname"><b>Last Name <span><span style="color: red;"> *</span></b></label>
-                <input type="text" placeholder="Enter Last Name" name="lname" required>
+                <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required>
                 
                 <button type="submit" class="signupBtn" id="signup">Sign Up</button>        
             </div>
             <div class="container paddingButtom25px">
                 <p class="signupText">By clicking the Sign Up button, you agree to our</p>
-                <p class="signupText"><a href="#termsAndConditions" style="color: #2fd19b; text-decoration: none;">Terms & Conditions</a>
-                    , and <a href="#privacyPolicy" style="color: #2fd19b; text-decoration: none;">Privacy Policy</a> </p>
+                <p class="signupText"><a href="#termsAndConditions" class= "subsignupText" style="color: #2fd19b; ">Terms & Conditions</a>
+                    , and <a href="#privacyPolicy" class= "subsignupText" style="color: #2fd19b;">Privacy Policy</a> </p>
             </div>
         </form>
-        <script>
-            //---email validator----
-            var btn = document.getElementById('signup');
-            btn.onclick = checkEmail();
-
-            function checkEmail() {
-                var inputEmail = document.getElementById("inputEmail").value;
-                var unirest = require("unirest");
-                var req = unirest("GET", "https://rapidapi.p.rapidapi.com/v2/validate");
-                req.query({
-                    "ip_address": inputEmail,
-                    "email": inputEmail
-                });
-                req.headers({
-                    "x-rapidapi-key": "a005cde6ffmsh1a4cf16de2469efp176760jsn236def3507e3",
-                    "x-rapidapi-host": "zerobounce1.p.rapidapi.com",
-                    "useQueryString": true
-                });
-                req.end(function (res) {
-                    if (res.error) throw new Error(res.error);
-                    console.log(res.body);
-                });
-                var status = req.body.status;
-                var did_you_mean = req.body.did_you_mean;
-                if (status === 'invalid') {
-                    if (did_you_mean != null) {
-                        alert('Email address is invalid, please enter again.\nDid you mean "' + did_you_mean + '"');
-                    }
-                    alert('Email address is invalid, please enter again.');
-                }
-            };
+        <script src="/static/sign-up.js">
             
-
-            //----redirection-----
-            document.getElementsByClassName('signupBtn')[0].onclick = function() {
-                location.href = "http://127.0.0.1:5500/profiles.html"
-            }
         </script>
     </body>
 </html>

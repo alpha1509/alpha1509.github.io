@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/statistics-style.css">
+    <link rel="stylesheet" href="/static/statistics-style.css">
 
   
     <style>
@@ -18,20 +18,20 @@
 
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="#tutorian" class="logo-bar"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
-        <a class="menus" href="http://127.0.0.1:5500/profiles.html" id="myProfile">My Profiles</a>
+        <a href="#tutorian" class="logo-bar"><img src="/static/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+        <a class="menus" href="http://localhost:3000/profiles" id="myProfile">My Profiles</a>
         <a class="menus" href="#aboutUs">About Us</a>
         
-        <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-first">Log out</a>
-        <a href="#user-profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
-        <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-second">Log out</a>
+        <a href="http://localhost:3000/login" class="logOut" id="logout-first">Log out</a>
+        <a href="#user-profile" class="username"><img src="/static/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
+        <a href="http://localhost:3000/login" class="logOut" id="logout-second">Log out</a>
         <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
           <i class="fa fa-bars"></i>
         </a>
     </div>
     <div class="header-background">
         <div>
-            <img src="images/avatar1.png" class="prof-avatar">
+            <img src="/static/pavatar.jpg" class="prof-avatar">
         </div>
         <div class="header-pos">Alpha's profile</div>
     </div>
@@ -44,10 +44,10 @@
     <div class="space_white">space white</div>
 
     <div class="container">
-        <button class="dayScopeBtn">1 January 2020 - 1 August 2020</button>
+        <button class="dayScopeBtn">1 January 2020 - 7 December 2020</button>
         <button class="totalCostBtn">Total Cost <span><span style="color: white;
             background-color: #505050;padding: 5px;border-radius: 9px;">
-                    25,600 THB</span></button>
+                    17,600 THB</span></button>
     </div>
 
 
@@ -63,23 +63,23 @@
             
             <table style="width:100%">
                 <tr>
-                  <td><div class="ttl-cost">Kanda Saikaew</div></th>
+                  <td><div class="ttl-cost">John F.</div></th>
                     <td><div class="pg progressbar" >
-                        7,600 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
+                        7,600 THB<span><span style="color: rgb(145, 255, 94);">  </span></div>
                 </tr>
                 <tr>
-                  <td><div class="ttl-cost_1">Panupong Ch.</div></td>
+                  <td><div class="ttl-cost_1">Kanda Saikaew</div></td>
                   <td><div class ="pg1 progressbar" >
-                    5,400 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
+                    5,400 THB<span><span style="color: rgb(145, 255, 94);"></span></div>
                   
                 </tr>
                 <tr>
-                  <td><div class="ttl-cost_2">MrKelvin Storm</div></td>
+                  <td><div class="ttl-cost_2">Marcus Paz</div></td>
                   <td><div class="pg2 progressbar" >
-                    4,600 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
+                    4,600 THB<span><span style="color: rgb(145, 255, 94);"></span></div>
                   
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td><div class="ttl-cost_3">Mayuri T.</div></td>
                   <td><div class="pg3 progressbar" >
                     4,500 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
@@ -89,7 +89,7 @@
                     <td><div class="ttl-cost_4">Kumon</div></td>
                     <td><div class="pg4 progressbar" >
                         2,500 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
-                  </tr>
+                  </tr>  -->
               </table>
             
         </div>
@@ -100,21 +100,21 @@
             <div class="space">space</div>
             <table style="width:100%">
                 <tr>
-                  <td><div class="ttl-cost_C">Computer Programing</div></th>
+                  <td><div class="ttl-cost_C">Drawing</div></th>
                     <td><div class="pgC progressbar_C" >
                         6,500 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
                 </tr>
                 <tr>
-                  <td><div class="ttl-cost_1_C">English IV</div></td>
+                  <td><div class="ttl-cost_1_C">Computer Programing</div></td>
                   <td><div class="pg1C progressbar_C" >
                     6,400 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
                 </tr>
                 <tr>
-                  <td><div class="ttl-cost_2_C">Science</div></td>
+                  <td><div class="ttl-cost_2_C">Machine Learning</div></td>
                   <td><div class="pg2C progressbar_C" >
                     4,600 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td><div class="ttl-cost_3_C">Singing</div></td>
                   <td><div class="pg3C progressbar_C" >
                     4,500 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
@@ -129,35 +129,14 @@
                     <td><div class="pg5C progressbar_C">
                         2,300 THB<span><span style="color: rgb(145, 255, 94);">ss</span></div>
 
-                  </tr>
+                  </tr> -->
               </table>
         
         </div>
     </div>
-    <script src="scripts/redirect.js"></script>
-    <script>
-        //-----**functions for responsive navigation bar**--------
-        function responNavbar() {
-           var x = document.getElementById("myTopnav");
-           if (x.className === "topnav") {
-               x.className += " responsive";
-           } else {
-               x.className = "topnav";
-           }
-       }
-       function screenWidth(x) {
-           if (x.matches) { // If media query matches
-               document.getElementById('logout-first').style.display = "none";
-               document.getElementById('logout-second').style.display = "";
-           } else {
-               document.getElementById('logout-first').style.display = "flex";
-               document.getElementById('logout-second').style.display = "none";
-           }
-       }
-       var x = window.matchMedia("(max-width: 700px)")
-       screenWidth(x) // Call listener function at run time
-       x.addListener(screenWidth) // Attach listener function on state changes
-       //--------**End of functions for responsive navigation bar**-------
+    <script src="/static/redirect.js"></script>
+    <script src="/static/statistic.js">
+      
    </script>
     
 </body>

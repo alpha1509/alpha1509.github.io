@@ -4,27 +4,54 @@
         <title>Tutorian</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/profiles-style.css">
+        <link rel="stylesheet" href="/static/profiles-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
             }
+            
         </style>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     </head>
 
     <body>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCyYMkWDfp4sN9Pf5J7zrId1gXD6tnapNQ",
+            authDomain: "tutorian-f39d3.firebaseapp.com",
+            projectId: "tutorian-f39d3",
+            storageBucket: "tutorian-f39d3.appspot.com",
+            messagingSenderId: "955435679838",
+            appId: "1:955435679838:web:0fdb1fd7ce0bec8a1334cf",
+            measurementId: "G-VCXLPPRG7N"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        </script>
         <!-- <div class="navigation-bar" id="myTopnav">
             <div id="navigation-container">
-                <a href="#tutorian"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+                <a href="#tutorian"><img src="/static/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
 
                 <ul class="floatLeft">
                     <li><a class="menus" href="http://127.0.0.1:5500/profiles.html">My Profiles</a></li>
                     <li><a class="menus" href="#aboutUs">About Us</a></li>
                 </ul>
                 <ul class="floatRight">
-                    <li><a href="#user-profile" class="username"><img src="images/avatar-default.png" class="def-avatar username">Panupong Chimmai</a></li>
+                    <li><a href="#user-profile" class="username"><img src="/static/avatar-default.png" class="def-avatar username">Panupong Chimmai</a></li>
                     <li style="color: #505050;">|</li>
                     <li><a href="http://127.0.0.1:5500/login.html" class="logOut">Log out</a></li>
                     <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -33,13 +60,13 @@
             </div>
         </div> -->
         <div class="topnav" id="myTopnav">
-            <a href="#tutorian" class="logo-bar"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
-            <a class="menus" href="http://127.0.0.1:5500/profiles.html" id="myProfile">My Profiles</a>
+            <a href="#tutorian" class="logo-bar"><img src="/static/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+            <a class="menus" href="http://localhost:3000/profiles" id="myProfile">My Profiles</a>
             <a class="menus" href="#aboutUs">About Us</a>
             
-            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-first">Log out</a>
-            <a href="#user-profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
-            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-second">Log out</a>
+            <a href="http://localhost:3000/login" class="logOut" id="logout-first">Log out</a>
+            <a href="#user-profile" class="username"><img src="/static/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
+            <a href="http://localhost:3000/login" class="logOut" id="logout-second">Log out</a>
             <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
               <i class="fa fa-bars"></i>
             </a>
@@ -50,38 +77,45 @@
         </div>
         <div class="container">
             <button class="addBtn" id="addButton">+ Add</button>
-            <button class="sortBtn"><i class="fas fa-sort-amount-down"></i>Sort by</button>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fas fa-sort-amount-down"></i>Sort by</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Most cost</a>
+                  <a href="#about">Most active courses</a>
+                  <a href="#contact">Date added (oldest)</a>
+                  <a href="#contact">Date added (newest)</a>
+                </div>
+              </div>
         </div>
         
         
-        <div class="container">
-            <a href="http://127.0.0.1:5500/courses.html" style="text-decoration: none;" class="profile-achor"><div class="profile-con" style="background-color: #5AC7BA;">
+        <div class="container" id="container-of-courses">
+            <!-- <div class="profile-con" style="background-color: #5AC7BA;" id="prof1">
                 <div>
-                    <img src="images/avatar1.png" class="prof-avatar">
+                    <img src="/static/avatar1.jpg" class="prof-avatar">
                 </div>
-                <div class="prof-name">Alpha</div>
+                <div class="prof-name" id="profname1">Alpha</div>
                 <div class="edit-point">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <button class="edit-btn edit-course" id="edit1"><i class="far fa-edit"></i></button>
+                    <button class="edit-btn del-course" id="del1"><i class="far fa-trash-alt"></i></button>
                 </div>
                 <div class="ttl-cost">Total Cost<div class="text-in-prof-con">8,900</div></div>
                 <div class="atv-course">Active Course<div class="text-in-prof-con">2</div></div>
-            </div></a>
-            <a href="http://127.0.0.1:5500/courses.html" style="text-decoration: none;" class="profile-achor"><div class="profile-con" style="background-color: #5B92D1;">
+            </div>
+            <div class="profile-con" style="background-color: #5B92D1;" id="prof2">
                 <div>
-                    <img src="images/avatar2.png" class="prof-avatar">
+                    <img src="/static/avatar2.jpg" class="prof-avatar">
                 </div>
-                <div class="prof-name">Cristina</div>
+                <div class="prof-name" id="profname2">Cristina</div>
                 <div class="edit-point">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <button class="edit-btn edit-course" id="edit2"><i class="far fa-edit"></i></button>
+                    <button class="edit-btn del-course" id="del2"><i class="far fa-trash-alt"></i></button>
                 </div>
                 <div class="ttl-cost">Total Cost<div class="text-in-prof-con">14,600</div></div>
                 <div class="atv-course">Active Course<div class="text-in-prof-con">5</div></div>
-            </div></a>
+            </div> -->
         </div>
+
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -92,10 +126,30 @@
                 <h2>New Profile</h2>
             </div>
             <div class="modal-body">
-                <input type="text" placeholder="Enter Profile Name" name="proname" required style="margin-top: 4px;">
+                <input type="text" placeholder="Enter Profile Name" name="proname" id="newpname" required style="margin-top: 4px;">
                 <div class="btn-field">
                     <button class="cancelBtn">Cancel</button>
                     <button type="submit" class="confirmBtn">Confirm</button>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- The Editing Modal -->
+        <div id="myEditModal" class="modal">
+
+            <!-- Editing Modal content -->
+            <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="editModalHeader"></h2>
+            </div>
+            <div class="modal-body">
+                <input type="text" placeholder="Enter New Name" name="editpname" id="editpname" required style="margin-top: 4px;">
+                <div class="btn-field">
+                    <button class="cancelEditBtn">Cancel</button>
+                    <button type="submit" class="saveBtn">Save</button>
                 </div>
                 
             </div>
@@ -104,61 +158,8 @@
         
         </div>
 
-        <script>
-            // Get the modal
-            var modal = document.getElementById("myModal");
-
-            // Get the button that opens the modal
-            var btn = document.getElementById("addButton");
-
-            // Get the <span> element that closes the modal
-            var cancel = document.getElementsByClassName("cancelBtn")[0];
-            var conf = document.getElementsByClassName("confirmBtn")[0];
-
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-            modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            cancel.onclick = function() {
-            modal.style.display = "none";
-            }
-            conf.onclick = function() {
-            modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            /*
-            window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-            }
-            */
-
-            //-----**functions for responsive navigation bar**--------
-            function responNavbar() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-            function screenWidth(x) {
-                if (x.matches) { // If media query matches
-                    document.getElementById('logout-first').style.display = "none";
-                    document.getElementById('logout-second').style.display = "";
-                } else {
-                    document.getElementById('logout-first').style.display = "flex";
-                    document.getElementById('logout-second').style.display = "none";
-                }
-            }
-            var x = window.matchMedia("(max-width: 700px)")
-            screenWidth(x) // Call listener function at run time
-            x.addListener(screenWidth) // Attach listener function on state changes
-            //--------**End of functions for responsive navigation bar**-------
+        <script src="/static/profiles.js">
+           
 
         </script>
     </body>

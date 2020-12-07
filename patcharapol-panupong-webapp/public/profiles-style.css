@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 120px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    }
+
+.logo {
+float: left;
+width: 160px;
+margin: 0 30px 0 170px;
+padding: 5px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #63AFB5;
+    }
+    
+.topnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+.topnav .icon {
+    display: none;
+}
+
+
+.def-avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-right: 8px;
+}
+.menus {
+    margin-top: 12px;
+    padding: 20px;
+    float: left;
+}
+.menus:hover {
+    background-color: #63a2a7;
+    border-radius: 40px;
+}
+
+.logOut {
+    float: right;
+    font-size: 10px;
+    color: rgb(139, 139, 139);
+    margin: 11px 180px 0 20px;
+    padding: 20px;
+    background-color: #5d999e;
+    border-radius: 40px;
+}
+.logOut:hover {
+    color: rgb(90, 90, 90);
+    background-color: #b1e6e9;
+    border-radius: 40px;
+}
+.username {
+    float: right;
+    margin-left: 10px;
+    margin-top: 12px;
+    padding: 10px;
+}
+.username:hover {
+    background-color: #63a2a7;
+    border-radius: 40px;
+}
+
+.header-background {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    background-color: #e3feff;
+}
+.header-pos {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    float: left;
+    color: rgb(94, 94, 94);
+    cursor: default;
+    margin: 24px 0px 0px 360px;
+}
+.container {
+    margin: 30px auto;
+    width: 1200px;
+}
+.addBtn {
+    color: white;
+    background-color: #51D2AB;
+    width: 100px;
+    height: 35px;
+    border-radius: 11px;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.addBtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.dropbtn {
+    color: rgb(83, 83, 83);
+    background-color: white;
+    border-radius: 11px;
+    border: 2px solid rgb(83, 83, 83);
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(116, 116, 116);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    float: right;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  
+.profile-con {
+    max-width: 100%;
+    height: 160px;
+    border-radius: 14px;
+    box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.59);
+    margin: 30px 0;
+}
+
+.prof-avatar {
+    float: left;
+    margin: 20px 10px 10px 30px;
+    width: 110px;
+    height: 110px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.prof-name {
+    font-size: 48px;
+    padding: 48px 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px 1px black;
+    float: left;
+}
+.prof-name:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.atv-course {
+    float: right;
+    background-color: #BCFCF3;
+    width: 200px;
+    height: 88px;
+    margin: 30px 20px;
+    padding-top: 12px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(58, 58, 58);
+    border-radius: 18px;
+}
+.ttl-cost {
+    float: right;
+    background-color: #FFFFC8;
+    width: 200px;
+    height: 88px;
+    margin: 30px 0px 30px 20px;
+    padding-top: 12px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(58, 58, 58);
+    border-radius: 18px;
+}
+.text-in-prof-con {
+    font-size: 38px;
+    font-weight: 700;
+}
+.edit-point {
+    float: right;
+    margin-right: 0px;
+    margin-top: 5px;
+    padding: 5px 5px 18px 5px;
+    width: 50px;
+    height: 50px;
+}
+.edit-btn {
+    background-color:rgba(255, 255, 255, 0.342);
+    border: 0;
+    border-radius: 5px;
+    width: 30px;
+    margin: 2px;
+    margin-top: 4px;
+}
+.edit-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 300px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #F1FAFE;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+/* The Close Button */
+
+.modal-header {
+    font-size: 28px;
+    text-align: center;
+    color: rgb(97, 97, 97);
+}
+
+.modal-body {margin: 10px 30px;}
+
+.btn-field {
+    width: 100%;
+    display: inline-block;
+}
+.cancelBtn:hover,
+.confirmBtn:hover{
+    opacity: 0.8;
+}
+.cancelBtn, .cancelEditBtn {
+    background-color: rgb(143, 143, 143);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 22px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 45%;
+    height: 50px;
+}
+.confirmBtn, .saveBtn {
+    float: right;
+    background-color: #51D2AB;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 22px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 45%;
+    height: 50px;
+}
+input[type=text] {
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #9E9E9E;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #4e4e4e;
+}
+
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: inline;
+        margin: 12px;
+        font-size: 30px;
+    }
+    .logo {
+        float: left;
+        width: 120px;
+        margin: 5px;
+        padding: 0;
+    }
+
+}
+  
+@media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .menus {
+        margin: 10px 5px;
+    }
+    #myProfile {
+        margin-top: 60px;
+    }
+    .username {
+        margin: 10px 5px;
+    }
+    .logOut {
+        margin: 10px 5px;
+    }
+    .container {
+        width: 90%;
+    }
+    .prof-avatar {
+        margin: 14px 10px 10px 15px;
+        width: 45px;
+        height: 45px;
+    }
+    .prof-name {
+        font-size: 18px;
+        padding: 26px 0px;
+        
+    }
+    .profile-con {
+        max-width: 100%;
+        height: 70px;
+    }
+    .ttl-cost {
+        width: 70px;
+        height: 45px;
+        margin: 13px -4px 30px 20px;
+        padding-top: 14px;
+        font-size: 10px;
+    }
+    
+.atv-course {
+    width: 70px;
+    height: 45px;
+    padding-top: 14px;
+    margin: 13px -12px;
+    font-size: 10px;
+}
+.text-in-prof-con {
+    font-size: 10px;
+}
+.edit-point {
+    margin-right: 4px;
+    margin-top: -8px;
+    padding: 5px 2px 0px 2px;
+}
+.dot {
+    height: 2px;
+    width: 2px;
+    display: inline-block;
+    }
+    .header-pos {
+        font-size: 24px;
+        margin: 28px 0px 0px 24px;
+    }
+    .addBtn {
+        width: 60px;
+        height: 28px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .sortBtn {
+        float: right;
+        width: 80px;
+        height: 28px;
+        font-size: 14px;
+    }
+}

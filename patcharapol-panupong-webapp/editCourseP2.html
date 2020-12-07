@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorian</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/editCourseP2.css">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="#tutorian" class="logo-bar"><img src="/static/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+            <a class="menus" href="/profiles" id="myProfile">My Profiles</a>
+            <a class="menus" href="#aboutUs">About Us</a>
+            
+            <a href="/login" class="logOut" id="logout-first">Log out</a>
+            <a href="#user-profile" class="username"><img src="/static/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
+            <a href="/login" class="logOut" id="logout-second">Log out</a>
+            <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="header-background">
+            <div>
+                <img src="/static/avatar1.png" class="prof-avatar">
+            </div>
+            <div class="header-pos">Alpha's profile</div>
+        </div>
+        <div class="form">
+            <p id="creCourseHead">Edit Course</p>
+            <div class="container">
+                <div class = "inner_container">
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <label for="amountCourse">Totol Amount of Course Time<span style="color: red;"> *</span></label>
+                                <input type="number" id="amountCourse" name="amountCourse" min="1" required>
+                            </td>
+                            <td>
+                                <label for="timeType">Course Time Type<span style="color: red;"> *</span></label>
+                                <select name="timeType" id="timeType">
+                                    <option value="hours">Hours</option>
+                                    <option value="classes">Classes</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="startDate">Course Start Date<span style="color: red;"> *</span></label>
+                                <input type="date" id="startDate" name="startDate"  required>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="endDate">Course End Date</label>
+                                <input type="date" id="endDate" name="endDate" disabled="true">
+                            </td>
+                            <td>
+                                <label id="enableEnd"><input type="checkbox" name="enableEnd"> Enable</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th>Day</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="sunday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="sun"><span>Sunday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="sunStart" class="sun" name="sunStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="sunEnd" class="sun" name="sunEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="monday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="mon"><span>Monday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="monStart" class="mon" name="monStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="monEnd" class="mon" name="monEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="tuesday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="tue"><span>Tuesday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="tueStart" class="tue" name="tueStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="tueEnd" class="tue" name="tueEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="wednesday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="wed"><span>Wednesday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="wedStart" class="wed" name="wedStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="wedEnd" class="wed" name="wedEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="thursday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="thur"><span>Thursday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="thurStart" class="thur" name="thurStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="thurEnd" class="thur" name="thurEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="friday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="fri"><span>Friday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="friStart" class="fri" name="friStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="friEnd" class="fri" name="friEnd" disabled="true">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="ck_btn" id="saturday">
+                                    <label><input type="checkbox" value="0" class="dayCheck" name="sat"><span>Saturday</span></label>
+                                </div>
+                            </th>
+                            <th>
+                                <input type="date" id="satStart" class="sat" name="satStart" disabled="true">
+                            </th>
+                            <th>
+                                <input type="date" id="satEnd" class="sat" name="satEnd" disabled="true">
+                            </th>
+                        </tr>
+                    </table>
+                </div>   
+                  <table class="dotTable" style="width:100%">
+                    <th>
+                        <span class="dot"></span>
+                        <span class="activedot"></span>
+            
+                    </th>
+                  </table>
+                    <table style="width:100%">
+                        <tr>
+                          <td><button type="submit" class="cancelBtn">Cancel</button> </td>
+                          <td><button type="submit" class="confirmBtn">Save</button><button type="submit" class="backBtn">Back</button>  </td>
+                        </tr>
+                      </table>
+                    <br>
+                    <br>
+                    <br>
+            </div>
+        </div>
+        
+        <script src="/static/editCourseP2.js">
+           
+       </script>
+    </body>
+</html>

@@ -4,7 +4,7 @@
         <title>Tutorian</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/courses-style.css">
+        <link rel="stylesheet" href="/static/courses-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <style>
@@ -12,17 +12,43 @@
                 font-family: Arial, Helvetica, sans-serif;
             }
         </style>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     </head>
 
     <body>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyCyYMkWDfp4sN9Pf5J7zrId1gXD6tnapNQ",
+        authDomain: "tutorian-f39d3.firebaseapp.com",
+        projectId: "tutorian-f39d3",
+        storageBucket: "tutorian-f39d3.appspot.com",
+        messagingSenderId: "955435679838",
+        appId: "1:955435679838:web:0fdb1fd7ce0bec8a1334cf",
+        measurementId: "G-VCXLPPRG7N"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>
         <div class="topnav" id="myTopnav">
-            <a href="#tutorian" class="logo-bar"><img src="images/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
-            <a class="menus" href="http://127.0.0.1:5500/profiles.html" id="myProfile">My Profiles</a>
+            <a href="#tutorian" class="logo-bar"><img src="/static/tutorian-logo2.png" alt="Tutorian logo" class="logo"></a>
+            <a class="menus" href="http://localhost:3000/profiles" id="myProfile">My Profiles</a>
             <a class="menus" href="#aboutUs">About Us</a>
             
-            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-first">Log out</a>
-            <a href="#user-profile" class="username"><img src="images/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
-            <a href="http://127.0.0.1:5500/login.html" class="logOut" id="logout-second">Log out</a>
+            <a href="http://localhost:3000/login" class="logOut" id="logout-first">Log out</a>
+            <a href="#user-profile" class="username"><img src="/static/avatar-default.png" class="def-avatar">Panupong Chimmai</a>
+            <a href="http://localhost:3000/login" class="logOut" id="logout-second">Log out</a>
             <a href="javascript:void(0);" class="icon" onclick="responNavbar()">
               <i class="fa fa-bars"></i>
             </a>
@@ -30,9 +56,9 @@
 
         <div class="header-background">
             <div>
-                <img src="images/avatar1.png" class="prof-avatar">
+                <img src="/static/pavatar.jpg" class="prof-avatar">
             </div>
-            <div class="header-pos">Alpha's profile</div>
+            <div class="header-pos" id="headername"></div>
         </div>
         <div class="container">
             <button class="coursesTab tabBar">Courses</button>
@@ -41,99 +67,27 @@
         </div>
         <div class="container add-sort-btn-container">
             <button class="addBtn">+ Add</button>
-            <button class="sortBtn"><i class="fas fa-sort-amount-down"></i>Sort by</button>
+            <div class="dropdown">
+                <button onclick="dropdownFunction()" class="dropbtn"><i class="fas fa-sort-amount-down"></i>Sort by</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Most cost</a>
+                  <a href="#about">Alphabet</a>
+                  <a href="#about">Time remaining</a>
+                  <a href="#contact">Date added (oldest)</a>
+                  <a href="#contact">Date added (newest)</a>
+                </div>
+              </div>
             <div class="fisnied-checkbox">
                     <input type="checkbox" checked="checked" name="inc-finished"> Include finished course
             </div>
         </div>
-        <div class="container">
-            <div class="courses-con">
-                <div class="courses-color-line-bg" style="background-color: #52d8e7;">
-                    <div>
-                    <img src="images/com-pro-img.jpg" class="course-img">
-                    </div>
-                    <div class="course-name">Computor Programming</div>
-                    <div class="teacher">Kanda Saikaew</div>
-                </div>
-                <div class="courese-remaining">
-                    <div class="progress">
-                        <div class="progress-cover">
-                            <div class="progress-bar" style="width:80%">80%</div>
-                        </div>
-                    </div>
-                    <div class="remainig">8 hours remaining.</div>
-                </div>
-                <p class="next-class">Next class on 23 August, 16:00 - 19:00</p>
-                <div class="location"><i class="fas fa-map-marker-alt locate-icon"></i>EN4101 Computer Engineering Department, KKU</div>
-            </div>
-            <div class="courses-con">
-                <div class="courses-color-line-bg" style="background-color: #aee752;">
-                    <div>
-                    <img src="images/eng-img.png" class="course-img">
-                    </div>
-                    <div class="course-name">English for Engineering</div>
-                    <div class="teacher">Albert Einstein</div>
-                </div>
-                <div class="courese-remaining">
-                    <div class="progress">
-                        <div class="progress-cover">
-                            <div class="progress-bar" style="width:17%">17%</div>
-                        </div>
-                    </div>
-                    <div class="remainig">20 classes remaining.</div>
-                </div>
-                <p class="next-class">Next class on 24 August, 9:00 - 10:30</p>
-                <div class="location"><i class="fas fa-map-marker-alt locate-icon"></i>KKU Library</div>
-            </div>
-            <div class="courses-con">
-                <div class="courses-color-line-bg" style="background-color: #e7d852;">
-                    <div>
-                    <img src="images/swimming-img.jpg" class="course-img">
-                    </div>
-                    <div class="course-name">Swimmimg</div>
-                    <div class="teacher">P'Tom</div>
-                </div>
-                <div class="courese-remaining">
-                    <div class="progress">
-                        <div class="progress-cover">
-                            <div class="progress-bar" style="width:60%">60%</div>
-                        </div>
-                    </div>
-                    <div class="remainig">2 classes remaining.</div>
-                </div>
-                <p class="next-class">Next class on 27 August, 12:00 - 14:00</p>
-                <div class="location"><i class="fas fa-map-marker-alt locate-icon"></i>Awesome Swimming Pool</div>
-            </div>
+        <div class="container"  id="container-of-courses">
+            
         </div>
 
-        <script src="scripts/redirect.js"></script>
-        <script>
-            document.getElementsByClassName("addBtn")[0].onclick = function () {
-                location.href = "http://127.0.0.1:5500/addCourse.html";
-            };
-
-             //-----**functions for responsive navigation bar**--------
-             function responNavbar() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-            function screenWidth(x) {
-                if (x.matches) { // If media query matches
-                    document.getElementById('logout-first').style.display = "none";
-                    document.getElementById('logout-second').style.display = "";
-                } else {
-                    document.getElementById('logout-first').style.display = "flex";
-                    document.getElementById('logout-second').style.display = "none";
-                }
-            }
-            var x = window.matchMedia("(max-width: 700px)")
-            screenWidth(x) // Call listener function at run time
-            x.addListener(screenWidth) // Attach listener function on state changes
-            //--------**End of functions for responsive navigation bar**-------
+        <script src="/static/redirect.js"></script>
+        <script src="/static/courses.js">
+            
         </script>
     </body>
 </html>
