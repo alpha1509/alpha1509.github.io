@@ -24,44 +24,44 @@ for (day of dayCheck) {
         };
     });
 }
-let form = document.querySelector('#c-form')
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let cname = document.getElementById('cname').value;
-    let instrut = document.getElementById('instrut').value;
-    let instit = document.getElementById('instit').value;
-    let price = document.getElementById('price').value;
-    let loca = document.getElementById('loca').value;
-    let total_t = document.getElementById('amountCourse').value;
-    let t_type = document.getElementById('timeType').value;
-    let s_date = document.getElementById('startDate').value;
-    let e_date = document.getElementById('endDate').value;
-    let study = ['{wednesday,20:00,24:00}'];
-    db.collection('profiles').doc(m).collection('myprofiles').doc(pid).collection('mycourses').add({
-        cname: cname,
-        instructor: instrut,
-        institute: instit,
-        price: price,
-        location: loca,
-        total_time: total_t,
-        time_type: t_type,
-        start_date: s_date,
-        end_date: e_date,
-        study_day: study,
-        learned_time: 0
-    })
-    .then(function(docRef) {
-        alert('New course added succesfully!');
-        db.collection('profiles').doc(m).collection('myprofiles').doc(pid).update({
-            "active_course": 3,
-            "total_cost": 17600
-        })
-        .then(function() {
-            console.log("Document successfully updated!");
-            location.href = `/courses/${m}/${pid}`;
-        });
-    })
-});
+// let form = document.querySelector('#c-form')
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     let cname = document.getElementById('cname').value;
+//     let instrut = document.getElementById('instrut').value;
+//     let instit = document.getElementById('instit').value;
+//     let price = document.getElementById('price').value;
+//     let loca = document.getElementById('loca').value;
+//     let total_t = document.getElementById('amountCourse').value;
+//     let t_type = document.getElementById('timeType').value;
+//     let s_date = document.getElementById('startDate').value;
+//     let e_date = document.getElementById('endDate').value;
+//     let study = ['{wednesday,20:00,24:00}'];
+//     db.collection('profiles').doc(m).collection('myprofiles').doc(pid).collection('mycourses').add({
+//         cname: cname,
+//         instructor: instrut,
+//         institute: instit,
+//         price: price,
+//         location: loca,
+//         total_time: total_t,
+//         time_type: t_type,
+//         start_date: s_date,
+//         end_date: e_date,
+//         study_day: study,
+//         learned_time: 0
+//     })
+//     .then(function(docRef) {
+//         alert('New course added succesfully!');
+//         db.collection('profiles').doc(m).collection('myprofiles').doc(pid).update({
+//             "active_course": 3,
+//             "total_cost": 17600
+//         })
+//         .then(function() {
+//             console.log("Document successfully updated!");
+//             location.href = `/courses`;
+//         });
+//     })
+// });
 document.getElementsByClassName("backBtn")[0].onclick = function () {
     var addCoursePage = document.getElementById("course-form");
     var addCoursePage2 = document.getElementById("addCoursePage2");

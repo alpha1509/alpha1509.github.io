@@ -6,10 +6,10 @@ console.log(m);
 console.log(pid);
 
 document.getElementsByClassName("coursesTab")[0].onclick = function () {
-    location.href = `/courses/${m}/${pid}`;
+    location.href = `/courses`;
  };
  document.getElementsByClassName("calendarTab")[0].onclick = function () {
-    location.href = `/calendar/${m}/${pid}`
+    location.href = `/calendar`
  };
 
 //-----**functions for responsive navigation bar**--------

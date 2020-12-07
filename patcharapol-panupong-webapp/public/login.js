@@ -1,4 +1,6 @@
-// document.getElementsByClassName('loginBtn')[0].onclick = function() {
+document.getElementsByClassName('loginBtn')[0].onclick = function() {
+    location.href = "/profiles";
+}
 //    
 // let login_correct = false;
 // let form = document.querySelector('#login-form');

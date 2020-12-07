@@ -11,5 +11,5 @@
 //  };
 
 document.getElementById('myProfile').onclick = function() {
-   this.href = `/profiles/${m}`;
+   this.href = `/profiles`;
 };

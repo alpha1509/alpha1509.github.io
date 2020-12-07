@@ -37,10 +37,10 @@ console.log(pid);
             
         };
         document.getElementsByClassName("cancelBtn")[0].onclick = function () {
-            location.href = `/courses/${m}/${pid}`;
+            location.href = `/courses`;
         };
         document.getElementsByClassName("cancelBtn")[1].onclick = function () {
-            location.href = `/courses/${m}/${pid}`;
+            location.href = `/courses`;
         };
         //-----**functions for responsive navigation bar**--------
         function responNavbar() {

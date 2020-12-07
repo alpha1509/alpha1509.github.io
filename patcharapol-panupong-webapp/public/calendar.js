@@ -6,10 +6,10 @@ console.log(m);
 console.log(pid);
 
 document.getElementsByClassName("coursesTab")[0].onclick = function () {
-    location.href = `/courses/${m}/${pid}`;
+    location.href = `/courses`;
  };
  document.getElementsByClassName("statTab")[0].onclick = function () {
-    location.href = `/statistics/${m}/${pid}`
+    location.href = `/statistics`
  };
 
         document.addEventListener('DOMContentLoaded', function () {
