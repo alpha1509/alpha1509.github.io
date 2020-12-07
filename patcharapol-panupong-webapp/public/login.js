@@ -1,6 +1,6 @@
 document.getElementsByClassName('loginBtn')[0].onclick = function() {
     var pathname = window.location.pathname; 
-    location.href = "/"+ pathname +"/profiles";
+    location.href = "../patcharapol-panupong-webapp/profiles";
 }
 //    
 // let login_correct = false;
