@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>New York Times Popular News</h1>
+        <ol id="list"></ol>
+        
+        <script>
+            var url = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=4u9EhtcBuQnck4gbvGzzCAltqM1CoX05";
+            fetch(url).then(response => {
+                return response.json();
+            }).then(data => {
+                results = data.results
+                var ol = document.getElementById('list');
+                for (var news of results) {
+                    var li = document.createElement('li');
+                    var a = document.createElement('a');
+                    var img = document.createElement('img');
+                    a.href = news.url;
+                    a.innerHTML = news.title + "</br>"
+
+                    var media = news.media[0];
+                    thumbnail = media["media-metadata"];
+                    img.src = thumbnail[1].url;
+
+                    li.appendChild(a);
+                    li.appendChild(img);
+                    ol.appendChild(li);
+                }
+            })
+        </script>
+    </body>
+</html>
