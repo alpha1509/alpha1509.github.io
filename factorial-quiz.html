@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1 {
+                text-align: center;
+                background-color: yellow;
+            }
+            #random-integer {
+                font-weight: bold;
+                color: blue;
+            }
+            table {width: 25%;}
+            button {
+                background-color: green;
+                color: white;
+                float: right;
+                height: 30px;
+                border-radius: 5px;
+            }
+            button:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+            @media screen and (max-width: 600px) {
+                h1 {
+                    font-size: 24px;
+                }
+                table {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Factorial Quiz</h1>
+        <p>What is the factorial of <span id="random-integer"></span>?</p>
+        <table>
+            <tr>
+                <td><label for="answer">Answer:</label></td>
+                <td><input type="text" id="answer" name="answer"></td>
+            </tr>
+        </table>
+        <button id="check-btn" onclick="checkAnswer()">Check answer</button>
+        <p id="check-answer"></p>
+    </body>
+    <script>
+        var random_int = Math.floor(Math.random() * 5) + 1;
+        document.getElementById("random-integer").innerHTML = random_int; 
+        function factorialize(num) {
+                var result = num;
+                if (num === 0 || num === 1) 
+                    return 1; 
+                while (num > 1) { 
+                    num--;
+                    result *= num;
+                }
+                return result;
+        }
+        document.getElementById("")
+        function checkAnswer() {
+            if (document.getElementById("answer").value == factorialize(random_int)){
+                document.getElementById("check-answer").innerHTML = "Your answer is correct. Congratulations!";
+            } else {
+                document.getElementById("check-answer").textContent = "Your answer is incorrect. The correct answer is " + factorialize(random_int);
+            }
+        }
+    </script>
+</html>
