@@ -1,1 +1,5 @@
+On Teachable Machine website
 https://teachablemachine.withgoogle.com/models/UGzlH6V20/
+
+On my GitHub
+https://alpha1509.github.io/mask-detection/
